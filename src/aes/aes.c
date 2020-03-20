@@ -4,15 +4,13 @@
 // This file is subject to the terms and conditions defined in file 'LICENSE',
 // which is part of this source code package.
 
-#if defined(USE_ORIGINAL_AES)
-
 #include "../lmic/aes.h"
 
+#if defined(USE_ORIGINAL_AES)
 
 // global area for passing parameters (aux, key) and for storing round keys
 u4_t AESAUX[16/sizeof(u4_t)];
 u4_t AESKEY[11*16/sizeof(u4_t)];
-
 
 #if defined(CFG_bootloader) && defined(CFG_bootloader_aes)
 

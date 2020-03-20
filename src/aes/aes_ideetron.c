@@ -29,7 +29,7 @@
 
 #include "../lmic/aes.h"
 
-#if !defined(USE_ORIGINAL_AES)
+#if defined(USE_IDEETRON_AES)
 
 // This should be defined elsewhere
 void lmic_aes_encrypt(u1_t *data, u1_t *key);
@@ -142,4 +142,4 @@ u4_t os_aes (u1_t mode, u1_t *buf, u2_t len) {
     return 0;
 }
 
-#endif // !defined(USE_ORIGINAL_AES)
+#endif // defined(USE_IDEETRON_AES)

@@ -55,6 +55,10 @@
 // own LoRaWAN library. It also uses lookup tables, but smaller
 // byte-oriented ones, making it use a lot less flash space (but it is
 // also about twice as slow as the original).
+//#define USE_IDEETRON_AES
+
+#if !defined(USE_ORIGINAL_AES) && !defined(USE_IDEETRON_AES) 
 #define USE_IDEETRON_AES
+#endif
 
 #endif // _lmic_arduino_hal_config_h_
