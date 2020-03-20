@@ -257,7 +257,9 @@ u1_t hal_checkTimer (u4_t time) {
 static uint8_t irqlevel = 0;
 
 void hal_disableIRQs () {
-    //noInterrupts();
+    #if !defined(ARDUINO_ARCH_STM32)
+    noInterrupts();
+    #endif
     irqlevel++;
 }
 
